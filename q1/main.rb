@@ -13,12 +13,15 @@ class Q1::Main < Base
 
   def self.output_value(array)
     # -------- 編集可 --------
-    if araay
-      araay.each do |v|
+    # binding.pry
+    if array.empty?
+      puts "配列が空です"
+        # binding.pry
+      else
+        array.each do |v|
+        # binding.pry
         puts v
       end
-    else
-      puts "配列が空です"
     end
     # -------- ここまで --------
   end
