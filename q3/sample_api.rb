@@ -19,7 +19,7 @@ class Q3::SampleApi
         country: country,
       }
     else
-      raise "Invalid type Error!"
+      raise sample_api.rb "Invalid type Error!"
     end
   end
 end
