@@ -1,9 +1,9 @@
 class User
   def initialize(name)
-    @name = name
+    name = name
   end
 
-  def self_introduce
+  def self_introduce(name)
     puts "私の名前は #{name} です！！"
   end
 end
