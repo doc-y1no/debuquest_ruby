@@ -4,7 +4,7 @@ require "./q4/calc.rb"
 class Q4::Main < Base
   def self.execute
     numbers = [2, 5, 10, 30]
-
+    binding.pry
     # ここから下のコードは変更しないこと
     if Q4::Calc.twice(numbers) == [4, 10, 20, 60]
       puts "おめでとう！正解です！"
