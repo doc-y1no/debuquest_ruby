@@ -28,12 +28,12 @@ class Q5::SlotMachine
   private
 
     def count_same_numbers(number1:, number2:, number3:)
-      same_numbers_count = if (number1 == number2 && number1 == number3)
-                            2
-                          elsif number1 == number2 || number1 == number3 || number2 == number3
+      same_numbers_count = if (number1 == number2 && number1 == number3 )#1と2が一緒　3が違うのに、大当たりが出た。3も一緒にならないと行けない　左の式で本来1＝2　で1＝3なら2と3も必然的に一緒になるはず。別のところに原因はあるのか。あった。
+                            3
+                          elsif number1 != number2 && number1 != number3 && number2 != number3 #　面倒なので、どこか全部バラバラを作成する。　→先に書いていた1と2が一緒のときは、1と3、2と3は同じではいけない　これだと、2つ以上同じの場合などが出てしまう。
                             1
                           else
-                            0
+                            2 #ここを2つ一致に変更数字を3に変更
                           end
       same_numbers_count
     end
