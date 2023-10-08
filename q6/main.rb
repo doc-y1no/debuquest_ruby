@@ -11,7 +11,7 @@ class Q6::Main < Base
     general_user = Q6::User.new(name: "一般ユーザー", role: "general")
     general_user.disp_data
 
-    puts "〜管理ユーザーによるユーザー作成〜"
+    puts "〜管理ユーザーによるユーザー作a成〜"
     params = { name: "ユーザー1", role: "general" }
     user1 = admin_user.create_user(params)
     user1.disp_data

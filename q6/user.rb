@@ -11,8 +11,8 @@ class Q6::User < Base
   end
 
   def create_user(params)#ここに記述すると、②と③がクリアされそう。
-    Q6::User.new(params)#user2のparamsを受け取ったら、user2.disp_dataを記載したのと同じ動作をさせたい。しかしただ記述しただけではエラーかつ、動かしてもおそらくuser1も同じになるかも。そもそもここから表示させられたらのはなし、、、
-
+   Q6::User.new(params)#user2のparamsを受け取ったら、user2.disp_dataを記載したのと同じ動作をさせたい。しかしただ記述しただけではエラーかつ、動かしてもおそらくuser1も同じになるかも。そもそもここから表示させられたらのはなし、、、
+   # binding.pry
 
   end
 
@@ -47,8 +47,8 @@ class Q6::User < Base
 
   def disp_data #disp_dataの"権限: #{ROLE[role]}"がnilの様子　roleにデータが届いていない？
     #本来は"管理者"と表示されるはず。
-    puts "名前: #{@name}"
-    puts "権限: #{@role}" #ここを修正することで、すべての権限が出てきた。
+    puts "名前: #{ROLE[:@name]}"
+    puts "権限: #{ROLE[:@role]}" #ここを修正することで、すべての権限が出てきた。
     # binding.pry
     puts "--------------------"
   end
